@@ -282,6 +282,7 @@ border-radius: 5px 5px 35px 35px;
 }
 
 .box img {
+    background-color: #333;
     width: 100px;
     height: 150px;
 
