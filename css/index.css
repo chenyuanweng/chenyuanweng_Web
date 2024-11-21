@@ -1,0 +1,308 @@
+/* 共同部分設定 */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace
+}
+body{
+    background-color: rgb(88, 88, 88);
+    /* background-image: url("../img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg");
+    background-repeat: no-repeat;
+    margin: 24px;
+    border: 1px solid red; */
+}
+/* 頁首區_區塊的間隔 */
+/* 左側內容_區區塊的間隔 */
+/* 右側清單_區區塊的間隔 */
+
+#header,#content,#sideber{
+    margin-bottom: 30px;
+}
+
+/* 圖片 */
+img{
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    /* 圖片寬度>視窗寬度 = 圖片會自動縮放到視窗寬度 */
+    /* 圖片寬度<視窗寬度 = 圖片維持原寬度 */
+    max-width: 100%;
+    vertical-align: bottom; /*取消圖片下方預設留白*/
+}
+
+.wrap{
+    /* border: 1px solid red; */
+    width: 1200px;
+    margin: auto;
+    border-radius: 35px 35px 35px 35px;
+    /* background: linear-gradient(90deg, #ccc 50%, transparent 60%); */
+
+    background-color: rgb(62, 62, 62);
+    background-image: url("../img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg");
+    background-repeat: no-repeat;
+    /* margin: 24px; */
+
+}
+
+/* #header{
+    border: 1px solid red;
+} */
+
+#header h1 img{
+margin: 0px 0px 3px 10px;
+}
+
+#headerimg img{
+    /* border: 1px solid red; */
+    width: 100%;
+    border-radius: 35px 35px 5px 5px;
+}
+
+/* 頁首區 */
+/* 浮動方法 */
+#logo{
+    margin-top: 8px;
+    margin-left: 15px;
+    float: left;
+}
+#logo h1{
+    color: #fff;
+    line-height: 1;
+}
+#iconmenu{
+    float: right;
+    margin: 5px 30px 5px 0;
+}
+#iconmenu ul li{
+    display: inline;
+    margin-left: 10px;
+}
+
+/* 頁首選單 */
+#nav{
+    background-color: #000;
+    /* 因為浮動導致高度消失，用以下方式抓回高度 */
+    overflow: hidden;
+}
+#nav a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-right:1px solid #fff;
+    /* display: inline-block; */
+    display: block;
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px; /*字大小*/
+    font-weight: bold; /*字粗細*/
+}
+#nav li{
+    /* display: inline; */
+    float: left;
+}
+#nav a:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* 左側內容區 */
+#content{
+/* border: 1px solid red; */
+/* background-color: aqua; */
+/* width: 550px; */
+width: 60%;
+/* height: 100%; */
+float: left;
+margin-left: 5px;
+}
+
+/* 左側內容區日期 */
+#content .date{
+    border: 3px solid #ccc;
+    background-color: #00A29A;
+    color: #fff;
+    border-radius: 50%;
+    float: right;
+    padding: 8px 22px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* 日．月堆疊 */
+#content .date span{
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+}
+
+/* 內容標題(線) */
+#content h2{
+    /* border: 1px solid red; */
+    /* width: 100px; 線段長度 */
+    /* border-bottom: 1px solid #000; */
+    /* border-bottom: 1px solid #fff; */
+    padding-bottom: 1px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+}
+
+#content h2 a{
+    /* border: 1px solid red; */
+    margin: 0 0 10px 10px;
+}
+
+/* 內容類別 */
+#content .cat{
+    font-size: 12px;
+    /* color: #aaa; */
+    color: #000;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+/* 內容類別中的超連結 */
+#content .cat a{
+    /* color: #aaa; */
+    color: #000;
+    text-decoration: none;
+}
+/* 內容段落 */
+#content p{
+    /* background-color: #fff; */
+    line-height: 1.6;
+    /* 內容文字左右對齊 */
+    text-align: justify;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/*右側清單區*/
+#sideber{
+    /* border: 1px solid red; */
+    /* background-color: aquamarine; */
+    /* width: 300px; */
+    width: 35%;
+    float: right;
+    margin-right: 5px;
+}
+
+.menu{
+    /* border: 1px solid red; */
+    margin-bottom: 50px;
+    color: rgb(0, 132, 255);
+}
+.menu h3{
+    /* border: 1px solid red; */
+    /* background-color: #ccc; */
+    font-size: 26px;
+}
+.menu ul{
+    /* border: 1px solid red; */
+    /* border-top: 1px solid #ccc; */
+    border-top: 1px solid #fff;
+}
+
+/* 自己測試使用箭頭文字 */
+.menu ul h4{
+    /* border: 1px solid red; */
+    float: left;
+    /* margin-top: 12px; */
+    /* margin-right: 10px; */
+    margin: 12px 10px 0 0; /*上,右,下,左*/
+    }
+
+.menu li{
+    border-bottom: 1px dashed #000;
+}
+/* 清單中的超連結 */
+.menu li a{
+    display: block;
+    /* color: #999; */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    /* 以下圖片icon箭頭可使用自己測試的文字箭頭代替 */
+    /* 加上清單項目icon */
+    /* 回到上一層(../) */
+    /* background-image: url("../img/listmark.png");
+    background-repeat: no-repeat;
+    background-position: left 50%;
+    padding-left: 20px; */
+}
+.menu h3 img{
+    margin: 0px 0px 5px 10px;
+}
+.menu li:hover a{
+    background-color: #ccc;
+    color: #fff;
+    font-weight: bolder;
+}
+.menu ul:hover h4{
+    /* border: 1px solid red; */
+    /* background-color: #ccc; */
+    /* border-radius: 50%; */
+    color: #fff;
+    font-weight: bolder;
+}
+
+/* 頁尾區 */
+#footer{
+clear: both; /*取消浮動(沒有取消會產生位移)*/
+background-color: #000;
+color: #fff;
+padding: 10px;
+text-align: center;
+padding: 30px 10px;
+border-radius: 5px 5px 35px 35px;
+}
+#footer p{
+    font-size: 20px;
+}
+
+/* =========================================================================== */
+.box {
+    /* background-color: #ccc;
+    padding: 3px;
+    border-radius: 35px 5px 35px 5px; */
+
+    /* 圖片內容置中 */
+    
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+.box p{
+    font-weight: bolder;
+    color: #fff;
+}
+
+.box img {
+    width: 100px;
+    height: 150px;
+
+    /* 圖片圓角效果 */
+    border-radius: 35px 5px 35px 5px;
+
+    /* 圖片邊框效果 */
+    border: 3px solid #ccc;
+    margin: 3px;
+
+    /* 垂直置中:為了平均圖片上下留白間隔 */
+    vertical-align: top;
+}
+.cat-work{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #fff;    
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.cat-work img{
+    margin-left: 10px;
+}
