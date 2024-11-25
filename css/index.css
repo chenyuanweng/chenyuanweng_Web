@@ -6,12 +6,12 @@
     font-family: 'Courier New', Courier, monospace
 }
 body{
-    min-width: 160px;
     background-color: rgb(88, 88, 88);
     /* background-image: url("../img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg");
     background-repeat: no-repeat;
     margin: 24px;
     border: 1px solid red; */
+    min-width: 100%;
 }
 /* 頁首區_區塊的間隔 */
 /* 左側內容_區區塊的間隔 */
@@ -19,6 +19,7 @@ body{
 
 #header,#content,#sideber{
     margin-bottom: 30px;
+    /* min-width: 100%; */
 }
 
 /* 圖片 */
@@ -29,6 +30,7 @@ img{
     /* 圖片寬度<視窗寬度 = 圖片維持原寬度 */
     max-width: 100%;
     vertical-align: bottom; /*取消圖片下方預設留白*/
+    /* min-width: 100%; */
 }
 
 .wrap{
@@ -42,21 +44,24 @@ img{
     background-image: url("../img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg");
     background-repeat: no-repeat;
     /* margin: 24px; */
-
+    /* min-width: 100%; */
 }
 
-/* #header{
-    border: 1px solid red;
-} */
+#header{
+    /* border: 1px solid red; */
+    /* min-width: 100%; */
+}
 
 #header h1 img{
 margin: 0px 0px 3px 10px;
+/* min-width: 100%; */
 }
 
 #headerimg img{
     /* border: 1px solid red; */
     width: 100%;
     border-radius: 35px 35px 5px 5px;
+    /* min-width: 100%; */
 }
 
 /* 頁首區 */
