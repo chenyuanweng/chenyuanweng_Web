@@ -6,45 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>網頁施工中</title>
+    <style>
+        /* 共同樣式設定 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(88, 88, 88);
+        }
+
+        /* 包裝區塊 */
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            max-width: 100%;
+            max-height: 100%;
+            padding: 20px;
+        }
+
+        /* 圖片容器 */
+        .pic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .pic img {
+            width: 100%;
+            max-width: 600px; /* 限制圖片最大寬度 */
+            height: auto;
+        }
+
+        /* 按鈕樣式 */
+        .homebutton a {
+            color: rgb(88, 88, 88);
+            font-weight: bolder;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 2px solid rgb(88, 88, 88);
+            font-size: 18px;
+        }
+
+        .homebutton a:hover {
+            background-color: rgb(88, 88, 88);
+            color: #fff;
+        }
+
+        /* 響應式設計 */
+        @media screen and (max-width: 768px) {
+            /* 手機模式 */
+            .pic img {
+                max-width: 100%;
+            }
+
+            .homebutton a {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            /* 平板模式 */
+            .pic img {
+                max-width: 80%;
+            }
+
+            .homebutton a {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+        }
+
+    </style>
 </head>
-<style>
-    body {
-        /* background-color: black; */
-        min-width: 100%;
-    }
-
-    wrap {
-        background-color: rgb(88, 88, 88);
-        max-width: 100%;
-        max-height: 100%;
-        min-width: 100%;
-    }
-
-    .pic {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 100%;
-    }
-
-    .homebutton a {
-        /* border: 1px solid red; */
-        color: rgb(88, 88, 88);
-        font-weight: bolder;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 100%;
-    }
-</style>
 
 <body>
-    <!-- <div>
-        <img src="./img/patrick-tomasso-QMDap1TAu0g-unsplash.jpg" alt="">
-    </div> -->
     <div class="wrap">
         <div class="pic">
-            <img src="./img/under_construction.jpg" alt="">
+            <img src="./img/under_construction.jpg" alt="Page Under Construction">
         </div>
         <div class="homebutton">
             <a href="./index.html">HOME</a>

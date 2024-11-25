@@ -16,41 +16,32 @@
 
         body {
             background-image: url("./img/andrew-ridley-jR4Zf-riEjI-unsplash.jpg");
-            background-size: 100%;
+            background-size: cover;
+            background-position: center;
             margin: 24px;
-            /* border: 1px solid red; */
-            min-width: 100%;
         }
 
         .wrap {
-            /* border: 1px solid red; */
             width: 100%;
-            height: 330px;
+            height: auto;
             margin: auto;
-            min-width: 100%;
         }
 
         .banner {
             background-color: #ccc;
-            /* 滿版設定 */
             width: 100%;
-            /* vh:以視窗高度為主 */
-            /* transparent=>透明 */
-            height: 100%;
+            height: 400px;
             margin-bottom: 50px;
             background: linear-gradient(115deg, #7bf 50%, transparent 50%) center center / 100% 100%,
             url("https://picsum.photos/1200/600") right center / auto 200%;
             margin: auto;
             border-radius: 35px 35px 5px 5px;
-            min-width: 100%;
         }
 
         .container {
-            /* border: 1px solid red; */
             width: 100%;
             height: 100%;
             margin: auto;
-            min-width: 100%;
         }
 
         .banner-txt {
@@ -59,136 +50,129 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            min-width: 100%;
+            color: #fff;
+            padding-left: 30px;
         }
 
         .banner-txt h1 {
-            font-size: 80px;
-            border-bottom: 1px solid #333;
+            font-size: 60px;
+            border-bottom: 1px solid #fff;
             font-weight: 900;
             padding-bottom: 10px;
             margin-bottom: 10px;
-            margin-left: 30px;
-            min-width: 100%;
         }
-
-        .banner-txt h1 img {
-            /* width: 50px; */
-            /* height: 50px; */
-            margin: 0px 0px 50px 20px;
-            /* min-width: 100%; */
-        }
-
-        /* .banner-txt h1 small {
-            display: block;
-            font-size: 50px;
-            font-weight: 700;
-        } */
 
         .banner-txt h2 {
-            font-size: 45px;
+            font-size: 40px;
             font-weight: 700;
-            margin-left: 30px;
-            /* min-width: 100%; */
         }
 
-        /* .banner-txt p {
-            font-size: 26px;
-            font-weight: 300;
-        } */
-
-        /* 頁首選單 */
         #nav {
-            /* border: 1px solid red; */
             background-color: #000;
-            /* 因為浮動導致高度消失，用以下方式抓回高度 */
             overflow: hidden;
-            /* min-width: 100%; */
         }
 
         #nav a {
             color: #fff;
             text-decoration: none;
             text-align: center;
-            border-right: 1px solid #fff;
-            /* display: inline-block; */
             display: block;
             width: 200px;
-            /* padding-top: 10px; */
-            /* padding-bottom: 10px; */
             line-height: 50px;
             font-size: 20px;
-            /*字大小*/
             font-weight: bold;
-            /*字粗細*/
-            /* min-width: 100%; */
         }
 
         #nav li {
-            /* display: inline; */
             float: left;
-            /* min-width: 100%; */
         }
 
         #nav a:hover {
             background-color: #ccc;
             color: #000;
-            /* min-width: 100%; */
         }
 
         .box {
-            /* background-color: #333; */
-            /* border: 1px solid red; */
-            max-width: 100%;
-            /* width: 100%; */
-            margin: auto;
             margin-top: 80px;
             margin-bottom: 30px;
-            /* min-width: 100%; */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            padding: 0 20px;
         }
 
         .box img {
-            background-color: #333;
-            width: 300px;
-            height: 350px;
-
-            /* 圖片圓角效果 */
+            width: 100%;
+            height: auto;
             border-radius: 35px 5px 35px 5px;
-
-            /* 圖片邊框效果 */
             border: 3px solid #333;
-            margin: 3px;
-
-            /* 垂直置中:為了平均圖片上下留白間隔 */
-            vertical-align: top;
-            /* min-width: 100%; */
         }
 
         #footer {
-            clear: both;
-            /*取消浮動(沒有取消會產生位移)*/
             background-color: #000;
             color: #fff;
-            padding: 10px;
-            text-align: center;
             padding: 30px 10px;
+            text-align: center;
             border-radius: 5px 5px 35px 35px;
-            /* min-width: 100%; */
         }
 
         #footer p {
             font-size: 20px;
-            /* min-width: 100%; */
         }
 
         .homebutton a {
-            /* border: 1px solid red; */
             color: #fff;
             font-weight: bolder;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* min-width: 100%; */
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #333;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .homebutton a:hover {
+            background-color: #444;
+        }
+
+        /* 響應式設計 */
+        @media screen and (max-width: 768px) {
+            .banner-txt h1 {
+                font-size: 40px;
+            }
+
+            .banner-txt h2 {
+                font-size: 30px;
+            }
+
+            #nav a {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .box {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .banner-txt h1 {
+                font-size: 30px;
+            }
+
+            .banner-txt h2 {
+                font-size: 20px;
+            }
+
+            #nav a {
+                font-size: 14px;
+            }
+
+            .box {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -197,7 +181,6 @@
     <div class="wrap">
         <div class="banner">
             <div class="container">
-                <!-- 文字區 -->
                 <div class="banner-txt">
                     <h1>Cyw's Design<a><img src="./img/pet_cat.png" alt=""></a></h1>
                     <h2>CAT Studio</h2>
@@ -233,11 +216,11 @@
                         <img src="./img/Portfolio/pic5.png" alt="">
                     </a>
                 </li>
-                <li><a href="./img/Portfolio/pic6.png" data-lightbox="group1" data-title="PHOTO5">
+                <li><a href="./img/Portfolio/pic6.png" data-lightbox="group1" data-title="PHOTO6">
                         <img src="./img/Portfolio/pic6.png" alt="">
                     </a>
                 </li>
-                <li><a href="./img/Portfolio/pic7.png" data-lightbox="group1" data-title="PHOTO5">
+                <li><a href="./img/Portfolio/pic7.png" data-lightbox="group1" data-title="PHOTO7">
                         <img src="./img/Portfolio/pic7.png" alt="">
                     </a>
                 </li>
@@ -245,8 +228,7 @@
         </div>
         <div id="footer">
             <p>Cyw's space</p>
-            <small>&copy;2024 xxx. All right reserved.</small>
-            <!-- <h4>&copy;2024 xxx. All right reserved.</h4> -->
+            <small>&copy;2024 xxx. All rights reserved.</small>
         </div>
         <div class="homebutton">
             <a href="./index.html">HOME</a>
@@ -255,24 +237,7 @@
 
     <!-- jQuery主程式 -->
     <script src="./js/jquery-1.11.3.min.js"></script>
-
-    <!-- 旋轉木馬主程式 -->
-    <script src="./js/jquery.jcarousellite.min.js "></script>
-
-    <!-- 自行撰寫JS -->
-    <!-- 駝峰式命名 -->
-    <!-- 小駝峰(第二個單字開始的字首為大寫) -->
-    <!-- 大駝峰(第一個單字開始的字首為大寫) -->
-    <script>
-        $(function () {
-            $('.box').jCarouselLite({
-                auto: 1200, //圖片捲動時間間隔 (單位:毫秒)
-                speed: 600, //捲動速度
-                scroll: 1, //每次捲動張數
-                visible: 6, //固定展示張數
-            });
-        });
-    </script>
+    <!-- Lightbox主程式 -->
     <script src="./lightbox/js/lightbox.js"></script>
 </body>
 
